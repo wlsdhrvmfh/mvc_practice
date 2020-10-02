@@ -4,7 +4,7 @@ const call = require("./");
 
 exports.getInfo = function(req, res) {
 
-    model.getInfo(req, res);
-    //res.send("hello~github");
+    //model.getInfo(req, res);
+    res.send("hello~github. please!!");
 
 }
