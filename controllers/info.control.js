@@ -5,6 +5,6 @@ const call = require("./");
 exports.getInfo = function(req, res) {
 
     //model.getInfo(req, res);
-    res.send("hi~");
-    
+    res.send("hello~");
+
 }
