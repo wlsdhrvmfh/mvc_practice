@@ -1,7 +1,7 @@
 //모듈
+require('dotenv').config(); //환경설정
 const express = require('express');
 const routes = require('./routes');
-const PORT = process.env.PORT || 8000;
 const app = express();
 
 //미들웨어
@@ -28,6 +28,6 @@ finally{
 }
 
 //서버
-app.listen(PORT, () => {
-    console.log("port " + PORT + " 서버 실행중...");
+app.listen(process.env.SERVER_PORT, (req, res) => {
+    console.log("port " + process.env.SERVER_PORT + " 서버 실행중...");
 })
