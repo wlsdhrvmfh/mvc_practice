@@ -1,12 +1,12 @@
 //비동기 버전
 
 //views 연결
-const views = require("../views/index");
+//const views = require("../views/index");
 
 //set mongodb DAO
 const dbAccount = require('./_DAO/Mongo/Account');
 
-exports.getInfo = async function(req, res){
+exports.getInfo = async function(req, res, next){
 
     //정의된 스키마를 객체처럼 사용할 수 있도록 model() 함수로 컴파일
     const model = dbAccount.model('info', require('./_Schemas/info'));
@@ -37,7 +37,9 @@ exports.getInfo = async function(req, res){
         }
         
     })
-    views.sendJson(res); //작동함
+    //views.sendJson(res); //작동함
     //return next(req, res);
   
+    return next(req, res);
+    
 }

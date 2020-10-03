@@ -1,6 +1,6 @@
-const views = require("../views/");
+const views = require("../views/index");
 
-exports.collbackResult = function(req, res){
+exports.callbackResultWithLog = async function(req, res){
 
     views.sendJson(res);
     
