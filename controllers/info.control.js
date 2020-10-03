@@ -1,10 +1,10 @@
 const model = require('../models/info.model');
-const call = require("./");
+const control = require("./index");
 //const views = require('../views/index');
 
-exports.getInfo = function(req, res) {
+exports.getInfo = async function(req, res) {
 
-    model.getInfo(req, res);
+    await model.getInfo(req, res, control.callbackResultWithLog);
     //res.send("hello~github");
 
 }
